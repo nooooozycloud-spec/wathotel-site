@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <title>サイトリニューアルご提案レポート｜ワットホテル＆スパ飛騨高山</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: {
+        preflight: false,
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 13px; /* 本文13px */
+      line-height: 1.7;
+      margin: 0;
+      padding: 24px 16px 48px;
+      background: #e8eef3;
+      color: #333;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 32px 28px 40px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 0.25em;
+      border-left: 4px solid #2c5282;
+      padding-left: 0.6em;
+      color: #1a365d;
+    }
+    .subtitle {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #2c5282;
+      padding-bottom: 0.4rem;
+      color: #1a365d;
+    }
+    h2:first-of-type { margin-top: 0; }
+    
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 0 0 1.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px; /* 表内13px */
+      table-layout: auto;
+    }
+    th, td {
+      border: 1px solid #cbd5e0;
+      padding: 12px 15px;
+      vertical-align: middle;
+      text-align: left;
+    }
+    th {
+      background: #2c5282;
+      color: #fff;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    /* 1列目の幅を全テーブル共通で 225px に固定 */
+    th:first-child, td:first-child {
+      width: 225px;
+      min-width: 225px;
+      max-width: 225px;
+    }
+
+    td {
+      word-break: normal;
+      overflow-wrap: break-word;
+    }
+
+    tr:nth-child(even) td { background: #f7fafc; }
+    tr:hover td { background: #edf2f7; }
+
+    .toc-container {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 2rem 0;
+    }
+    .toc-title {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      color: #4a5568;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+    p.intro {
+      margin: 0 0 1rem;
+      color: #4a5568;
+      font-size: 14px;
+    }
+    .reference-box {
+      margin-top: 3rem;
+      padding: 1.5rem;
+      background: #f1f5f9;
+      border-radius: 8px;
+      border: 1px dashed #64748b;
+      text-align: center;
+    }
+    .pdf-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      background-color: #2c5282;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .ref-section-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a365d;
+      margin: 1.5rem 0 0.75rem;
+      padding-left: 0.5rem;
+      border-left: 3px solid #2c5282;
+    }
+    .ref-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+    }
+    @media (max-width: 900px) {
+      .ref-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .ref-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .ref-thumb-api {
+      width: 100%;
+      height: 100px;
+      background: #e2e8f0;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .ref-card {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      display: block;
+    }
+    .ref-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
+    }
+    .ref-thumb {
+      width: 100%;
+      height: 140px;
+      background: #e2e8f0;
+      display: block;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .ref-card-body {
+      padding: 12px;
+    }
+    .ref-card-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #2d3748;
+      margin: 0 0 4px;
+    }
+    .ref-card-url {
+      font-size: 10px;
+      color: #718096;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>サイトリニューアルに向けた構成・コンテンツのご提案</h1>
+      <p class="subtitle">ワットホテル＆スパ飛騨高山 公式サイト様</p>
+    </header>
+
+    <nav class="toc-container">
+      <span class="toc-title">目次</span>
+      <ul style="list-style: none; padding: 0; margin: 0;">
+        <li style="margin-bottom: 8px;"><a href="#section1" style="color: #2563eb; text-decoration: none; font-size: 13px;">1. 施設概要とターゲット層の整理</a></li>
+        <li style="margin-bottom: 8px;"><a href="#section2" style="color: #2563eb; text-decoration: none; font-size: 13px;">2. 優先的にアピールしたい「4つの強み」</a></li>
+        <li style="margin-bottom: 8px;"><a href="#section3" style="color: #2563eb; text-decoration: none; font-size: 13px;">3. システム・機能面での利便性向上</a></li>
+        <li style="margin-bottom: 8px;"><a href="#section4" style="color: #2563eb; text-decoration: none; font-size: 13px;">4. さらなる魅力発信のためのコンテンツ拡充案</a></li>
+        <li style="margin-bottom: 8px;"><a href="#pdf-section" style="color: #2563eb; text-decoration: none; font-size: 13px;">5. 【参考】コンセプト資料・参考サイト</a></li>
+      </ul>
+    </nav>
+
+    <section id="section1">
+      <h2>1. 施設概要とターゲット層の整理</h2>
+      <p class="intro">飛騨高山を満喫する拠点として、貴施設の持つポテンシャルを最大限に伝える構成をご提案します。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>項目</th><th>現状のポイントと訴求の方向性</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>立地</td>
+              <td><strong>JR高山駅から徒歩7分</strong>、歴史ある「古い町並み」も徒歩圏内という好立地を、地図や画像で直感的にアピールします。</td>
+            </tr>
+            <tr>
+              <td>施設種別</td>
+              <td>「心安らぐ癒しの空間」をキーワードに、ビジネスホテルの枠を超えた上質なホスピタリティを強調いたします。</td>
+            </tr>
+            <tr>
+              <td>ターゲット</td>
+              <td><strong>ビジネスからレジャーまで</strong>対応可能な客室バリエーションを、利用シーンに合わせて分かりやすく分類・提案します。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="section2">
+      <h2>2. 優先的にアピールしたい「4つの強み」</h2>
+      <p class="intro">決定打となる「おもてなしのポイント」を、ユーザーの記憶に残るビジュアルと文言で再構築いたします。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>強み</th><th>訴求のご提案内容</th><th>期待される効果</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>快適で上質な客室</td>
+              <<td><strong>シモンズ社製ベッド</strong>に加え、全室に「ウルトラファインバブル」シャワーヘッドやナノイー発生機を完備。</td>
+              <td>清潔感と睡眠の質を重視する層の満足度を高めます。</td>
+            </tr>
+            <tr>
+              <td>開放的な天然温泉</td>
+              <td><strong>屋上7階</strong>の露天風呂や一面ガラス張りの大浴場を、開放感が伝わる写真とともに大きく扱います。</td>
+              <td>「ここに行きたい」と思わせる視覚的な引きを創出します。</td>
+            </tr>
+            <tr>
+              <td>充実したアメニティ</td>
+              <td>女性に人気の選べるシャンプーバーや高品質なコスメなど、細やかな配慮をコンテンツ化します。</td>
+              <td>満足度の高さと「おもてなし」の姿勢を伝えます。</td>
+            </tr>
+            <tr>
+              <td>こだわりの朝食</td>
+              <td><strong>朴葉味噌</strong>などの郷土料理をメインとしたバイキングの魅力を、食欲をそそる表現で展開します。</td>
+              <td>「旅の楽しみ」を具体化し、成約率を向上させます。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="section3">
+      <h2>3. システム・機能面での利便性向上</h2>
+      <p class="intro">ユーザーがストレスなく検討・予約できる、現代のWEBサイトに求められる機能を整備します。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>カテゴリ</th><th>ご提案・対応の方向性</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>予約システムの最適化</td>
+              <td>外部予約システムへのスムーズな遷移と、リニューアルに伴う会員ログイン導線の分かりやすさを追求します。</td>
+            </tr>
+            <tr>
+              <td>情報の透明性</td>
+              <td><strong>3D View</strong>による館内確認や充実したFAQにより、予約前の心理的ハードルを下げます。</td>
+            </tr>
+            <tr>
+              <td>評価の見える化</td>
+              <td>「泊まってよかった大賞 岐阜県1位」などの<strong>第三者評価</strong>を、信頼の証として効果的に配置します。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="section4">
+      <h2>4. さらなる魅力発信のためのコンテンツ拡充案</h2>
+      <p class="intro">ファンを増やし、リピーターを獲得するための継続的なコミュニケーション案です。</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>提案項目</th><th>内容・活用イメージ</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>「今」を届けるSNS連携</td>
+              <td>Instagramと連動し、季節ごとの飛騨高山の美しさやホテルの最新情報をリアルタイムで発信します。</td>
+            </tr>
+            <tr>
+              <td>採用・広報の強化</td>
+              <td>「働く側の魅力」も発信することで、施設全体のブランド価値と信頼感を高めます。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pdf-section" class="reference-box" style="text-align:left;">
+      <h2 style="border:none; margin-top:0; text-align:center;">5. 【参考】コンセプト資料</h2>
+      <p class="intro" style="text-align:center;">
+        本資料は、リニューアルに向けたコンテンツの方向性を確認いただくためのサンプルとなります。<br>
+        デザインや細かなレイアウトについては、今後の打ち合わせを通して詰めてまいります。
+      </p>
+      <div style="margin-top: 1.5rem; text-align:center;">
+        <a href="https://drive.google.com/file/d/1ypot7lZpcFuAZh20zrbdhAMRgzWCu9or/view?usp=drive_link" target="_blank" class="pdf-link">コンセプト資料(PDF)を確認する</a>
+      </div>
+
+      <div class="ref-section-title">デザインの方向性イメージ</div>
+      <p style="font-size: 12px; color: #4a5568; margin: 0 0 1rem; line-height: 1.6;">配色、フォント、写真の使い方など、<strong>今回のリニューアルで目指したい「視覚的な雰囲気」</strong>の参考としてピックアップしました。</p>
+      <div class="ref-grid">
+        <a href="https://www.superhotel.co.jp/" target="_blank" rel="noopener noreferrer" class="ref-card">
+          <img class="ref-thumb" src="images/super-hotel.png" alt="スーパーホテル">
+          <div class="ref-card-body">
+            <p class="ref-card-title">スーパーホテル</p>
+            <p class="ref-card-url">superhotel.co.jp</p>
+          </div>
+        </a>
+        <a href="https://www.uds-hotels.com/all-day-place/" target="_blank" rel="noopener noreferrer" class="ref-card">
+          <img class="ref-thumb" src="images/all-day-place.png" alt="ALL DAY PLACE shibuya">
+          <div class="ref-card-body">
+            <p class="ref-card-title">ALL DAY PLACE shibuya</p>
+            <p class="ref-card-url">uds-hotels.com</p>
+          </div>
+        </a>
+        <a href="https://www.kamisute.com/" target="_blank" rel="noopener noreferrer" class="ref-card">
+          <img class="ref-thumb" src="images/kamisute.png" alt="上諏訪ステーションホテル">
+          <div class="ref-card-body">
+            <p class="ref-card-title">上諏訪ステーションホテル</p>
+            <p class="ref-card-url">kamisute.com</p>
+          </div>
+        </a>
+        <a href="https://www.resol-hotel.jp/" target="_blank" rel="noopener noreferrer" class="ref-card">
+          <img class="ref-thumb" src="images/resol-hotel.png" alt="RESOL HOTELS">
+          <div class="ref-card-body">
+            <p class="ref-card-title">RESOL HOTELS</p>
+            <p class="ref-card-url">resol-hotel.jp</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
