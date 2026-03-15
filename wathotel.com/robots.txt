@@ -1,0 +1,8 @@
+Sitemap: http://wathotel.com/sitemap.xml
+
+User-agent: *
+Disallow: /handy/
+Disallow: /rakuten/
+Disallow: /grouptour_member/
+Disallow: /demo2018/
+Disallow: /demo2018_02/
